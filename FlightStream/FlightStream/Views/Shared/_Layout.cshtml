@@ -9,32 +9,45 @@
 </head>
 <body>
     <div class="page">
-        <div id="header">
-            <div id="title">
-                <h1>My MVC Application</h1>
-                 <p class="text-warning">This is some warning action...</p>
-            </div>
-            <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
-            </div>
-            <div id="menucontainer">
-                <ul id="menu">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
-                    <li>@Html.ActionLink("Aircraft", "Index", "Aircraft")</li>
-                    <li>@Html.ActionLink("Personnel", "Index", "Personnel")</li>
-                    <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
-                    <li>@Html.ActionLink("FAA Certification", "Index", "FaaCertification")</li>
-                    <li>@Html.ActionLink("Settings", "Index", "Settings")</li>
-                    <li>@Html.ActionLink("Help", "Index", "Help")</li>
-                </ul>
+    <div id="header">
+        <div id="title">
+            @*<h1>My MVC Application</h1>*@
+           @* <p class="text-warning">This is some warning action...</p>*@
+        </div>
+        <div id="logindisplay">
+            @Html.Partial("_LogOnPartial")
+        </div>
+        <div class="navbar navbar-inverse navbar-fixed-top" id="menucontainer">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">FlightStream</a>
+                    <div class="nav-collapse collapse">
+                     
+                        <ul id="menu" class="nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
+                            <li>@Html.ActionLink("Aircraft", "Index", "Aircraft")</li>
+                            <li>@Html.ActionLink("Personnel", "Index", "Personnel")</li>
+                            <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+                            <li>@Html.ActionLink("FAA Certification", "Index", "FaaCertification")</li>
+                            <li>@Html.ActionLink("Settings", "Index", "Settings")</li>
+                            <li>@Html.ActionLink("Help", "Index", "Help")</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="main">
+        <div id="main" class="container">
             @RenderBody()
         </div>
         <div id="footer">
         </div>
+    </div>
     </div>
 </body>
 </html>
