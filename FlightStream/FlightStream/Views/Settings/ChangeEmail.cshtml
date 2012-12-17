@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "ChangeEmail";
+}
+
+<h2>ChangeEmail</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        New Email Address: <input id="newEmail" type="text"/>
+    </p>
+    <input type="submit" value="Save"/>
+}
