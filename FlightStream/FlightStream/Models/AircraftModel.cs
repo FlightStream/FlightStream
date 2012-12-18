@@ -1,4 +1,7 @@
-﻿namespace FlightStream.Models
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+
+namespace FlightStream.Models
 {
     public class AircraftModel
     {
@@ -21,5 +24,8 @@
         public int EmptyWeightCg { get; set; }
         public int EmptyWeightMoment { get; set; }
         public int MaxLandingWeight { get; set; }
+
+        public IEnumerable<SelectListItem> AircraftTemplates;
+        public int AircraftTemplateId { get; set; }
     }
 }
