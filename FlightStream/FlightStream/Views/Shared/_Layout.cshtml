@@ -14,9 +14,6 @@
             @*<h1>My MVC Application</h1>*@
            @* <p class="text-warning">This is some warning action...</p>*@
         </div>
-        <div id="logindisplay">
-            @Html.Partial("_LogOnPartial")
-        </div>
         <div class="navbar navbar-inverse navbar-fixed-top" id="menucontainer">
             <div class="navbar-inner">
                 <div class="container">
@@ -39,10 +36,14 @@
                             <li>@Html.ActionLink("Help", "Index", "Help")</li>
                         </ul>
                     </div>
+                     <div id="logindisplay">
+            @Html.Partial("_LogOnPartial")
+        </div>
                 </div>
             </div>
         </div>
         <div id="main" class="container">
+       
             @RenderBody()
         </div>
         <div id="footer">
