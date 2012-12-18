@@ -37,16 +37,16 @@ namespace FlightStream.Controllers
         }
 
         // /Aircraft/CreateFrom/5
-        [HttpPost]
-        public ActionResult CreateFrom(AircraftModel model)
-        {
-
-            var aircraftTemplate = _context.AircraftTemplates.Single(x => x.Id == aircraftTemplateId);
-            var aircraftModel = AdaptAircraft(aircraftTemplate);
-            return Create(aircraftModel);
-
-
-        }
+//        [HttpPost]
+//        public ActionResult CreateFrom(AircraftModel model)
+//        {
+//
+//            var aircraftTemplate = _context.AircraftTemplates.Single(x => x.Id == aircraftTemplateId);
+//            var aircraftModel = AdaptAircraft(aircraftTemplate);
+//            return Create(aircraftModel);
+//
+//
+//        }
 
         AircraftModel AdaptAircraft(AircraftTemplate t)
         {

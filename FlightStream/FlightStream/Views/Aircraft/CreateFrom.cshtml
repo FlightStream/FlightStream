@@ -35,7 +35,7 @@
         </div>
         <div class="editor-field">
             @*            @Html.EditorFor(model => model.Airframe)*@
-            @Html.DropDownListFor(model=>model.Airframe, Model.AircraftTemplates)
+            @Html.DropDownListFor(model=>model.AircraftTemplateId, Model.AircraftTemplates)
             @Html.ValidationMessageFor(model => model.Airframe)
         </div>
 
