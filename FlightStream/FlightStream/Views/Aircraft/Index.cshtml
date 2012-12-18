@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FlightStream.Models.AircraftModel>
+@model IEnumerable<FlightStream.Models.AircraftModel>
 
 @{
     ViewBag.Title = "Index";
@@ -11,23 +11,121 @@
 </p>
 <table>
     <tr>
+        <th></th>
         <th>
             Name
         </th>
-        <th></th>
+        <th>
+            TailNumber
+        </th>
+        <th>
+            Airframe
+        </th>
+        <th>
+            EngineCount
+        </th>
+        <th>
+            FuelTankCount
+        </th>
+        <th>
+            SeatCount
+        </th>
+        <th>
+            CargoHoldCount
+        </th>
+        <th>
+            BasicOpWeight
+        </th>
+        <th>
+            MaxOpWeight
+        </th>
+        <th>
+            MaxTakeoffWeight
+        </th>
+        <th>
+            MaxRampWeight
+        </th>
+        <th>
+            MaxZeroFuelWeight
+        </th>
+        <th>
+            MaxFuelCapacity
+        </th>
+        <th>
+            EmptyWeight
+        </th>
+        <th>
+            EmptyWeightCg
+        </th>
+        <th>
+            EmptyWeightMoment
+        </th>
+        <th>
+            MaxLandingWeight
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.Name
+        </td>
+        <td>
+			@item.TailNumber
+        </td>
+        <td>
+			@item.Airframe
+        </td>
+        <td>
+			@item.EngineCount
+        </td>
+        <td>
+			@item.FuelTankCount
+        </td>
+        <td>
+			@item.SeatCount
+        </td>
+        <td>
+			@item.CargoHoldCount
+        </td>
+        <td>
+			@item.BasicOpWeight
+        </td>
+        <td>
+			@item.MaxOpWeight
+        </td>
+        <td>
+			@item.MaxTakeoffWeight
+        </td>
+        <td>
+			@item.MaxRampWeight
+        </td>
+        <td>
+			@item.MaxZeroFuelWeight
+        </td>
+        <td>
+			@item.MaxFuelCapacity
+        </td>
+        <td>
+			@item.EmptyWeight
+        </td>
+        <td>
+			@item.EmptyWeightCg
+        </td>
+        <td>
+			@item.EmptyWeightMoment
+        </td>
+        <td>
+			@item.MaxLandingWeight
         </td>
     </tr>
 }
 
 </table>
+
+

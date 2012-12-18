@@ -1,4 +1,4 @@
-﻿@model FlightStream.Models.AircraftModel
+@model FlightStream.Models.AircraftModel
 
 @{
     ViewBag.Title = "Delete";
@@ -11,9 +11,55 @@
     <legend>AircraftModel</legend>
 
     <div class="display-label">Name</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">TailNumber</div>
+    <div class="display-field">@Model.TailNumber</div>
+
+    <div class="display-label">Airframe</div>
+    <div class="display-field">@Model.Airframe</div>
+
+    <div class="display-label">EngineCount</div>
+    <div class="display-field">@Model.EngineCount</div>
+
+    <div class="display-label">FuelTankCount</div>
+    <div class="display-field">@Model.FuelTankCount</div>
+
+    <div class="display-label">SeatCount</div>
+    <div class="display-field">@Model.SeatCount</div>
+
+    <div class="display-label">CargoHoldCount</div>
+    <div class="display-field">@Model.CargoHoldCount</div>
+
+    <div class="display-label">BasicOpWeight</div>
+    <div class="display-field">@Model.BasicOpWeight</div>
+
+    <div class="display-label">MaxOpWeight</div>
+    <div class="display-field">@Model.MaxOpWeight</div>
+
+    <div class="display-label">MaxTakeoffWeight</div>
+    <div class="display-field">@Model.MaxTakeoffWeight</div>
+
+    <div class="display-label">MaxRampWeight</div>
+    <div class="display-field">@Model.MaxRampWeight</div>
+
+    <div class="display-label">MaxZeroFuelWeight</div>
+    <div class="display-field">@Model.MaxZeroFuelWeight</div>
+
+    <div class="display-label">MaxFuelCapacity</div>
+    <div class="display-field">@Model.MaxFuelCapacity</div>
+
+    <div class="display-label">EmptyWeight</div>
+    <div class="display-field">@Model.EmptyWeight</div>
+
+    <div class="display-label">EmptyWeightCg</div>
+    <div class="display-field">@Model.EmptyWeightCg</div>
+
+    <div class="display-label">EmptyWeightMoment</div>
+    <div class="display-field">@Model.EmptyWeightMoment</div>
+
+    <div class="display-label">MaxLandingWeight</div>
+    <div class="display-field">@Model.MaxLandingWeight</div>
 </fieldset>
 @using (Html.BeginForm()) {
     <p>
@@ -21,3 +67,5 @@
         @Html.ActionLink("Back to List", "Index")
     </p>
 }
+
+

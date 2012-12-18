@@ -10,7 +10,7 @@ namespace FlightStream.Models
 
         public DbSet<ClientModel> ClientModels { get; set; }
 
-       
+        public DbSet<AircraftTemplate> AircraftTemplates { get; set; }
     }
 
     

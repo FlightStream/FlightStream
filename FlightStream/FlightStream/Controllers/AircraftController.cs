@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -8,17 +8,17 @@ using System.Web.Mvc;
 using FlightStream.Models;
 
 namespace FlightStream.Controllers
-{ 
+{   
     public class AircraftController : Controller
     {
-        private FlightStreamContext db = new FlightStreamContext();
+        private FlightStreamContext context = new FlightStreamContext();
 
         //
         // GET: /Aircraft/
 
         public ViewResult Index()
         {
-            return View(db.AircraftModels.ToList());
+            return View(context.AircraftModels.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Details(int id)
         {
-            AircraftModel aircraftmodel = db.AircraftModels.Find(id);
+            AircraftModel aircraftmodel = context.AircraftModels.Single(x => x.Id == id);
             return View(aircraftmodel);
         }
 
@@ -46,8 +46,8 @@ namespace FlightStream.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.AircraftModels.Add(aircraftmodel);
-                db.SaveChanges();
+                context.AircraftModels.Add(aircraftmodel);
+                context.SaveChanges();
                 return RedirectToAction("Index");  
             }
 
@@ -59,7 +59,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Edit(int id)
         {
-            AircraftModel aircraftmodel = db.AircraftModels.Find(id);
+            AircraftModel aircraftmodel = context.AircraftModels.Single(x => x.Id == id);
             return View(aircraftmodel);
         }
 
@@ -71,8 +71,8 @@ namespace FlightStream.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(aircraftmodel).State = EntityState.Modified;
-                db.SaveChanges();
+                context.Entry(aircraftmodel).State = EntityState.Modified;
+                context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(aircraftmodel);
@@ -83,7 +83,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Delete(int id)
         {
-            AircraftModel aircraftmodel = db.AircraftModels.Find(id);
+            AircraftModel aircraftmodel = context.AircraftModels.Single(x => x.Id == id);
             return View(aircraftmodel);
         }
 
@@ -92,16 +92,18 @@ namespace FlightStream.Controllers
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
-        {            
-            AircraftModel aircraftmodel = db.AircraftModels.Find(id);
-            db.AircraftModels.Remove(aircraftmodel);
-            db.SaveChanges();
+        {
+            AircraftModel aircraftmodel = context.AircraftModels.Single(x => x.Id == id);
+            context.AircraftModels.Remove(aircraftmodel);
+            context.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            if (disposing) {
+                context.Dispose();
+            }
             base.Dispose(disposing);
         }
     }

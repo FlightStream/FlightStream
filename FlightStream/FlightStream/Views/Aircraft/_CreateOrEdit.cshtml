@@ -1,0 +1,140 @@
+@model FlightStream.Models.AircraftModel
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.TailNumber)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.TailNumber)
+    @Html.ValidationMessageFor(model => model.TailNumber)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Airframe)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Airframe)
+    @Html.ValidationMessageFor(model => model.Airframe)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.EngineCount)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.EngineCount)
+    @Html.ValidationMessageFor(model => model.EngineCount)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.FuelTankCount)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.FuelTankCount)
+    @Html.ValidationMessageFor(model => model.FuelTankCount)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SeatCount)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SeatCount)
+    @Html.ValidationMessageFor(model => model.SeatCount)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.CargoHoldCount)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.CargoHoldCount)
+    @Html.ValidationMessageFor(model => model.CargoHoldCount)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.BasicOpWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.BasicOpWeight)
+    @Html.ValidationMessageFor(model => model.BasicOpWeight)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MaxOpWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MaxOpWeight)
+    @Html.ValidationMessageFor(model => model.MaxOpWeight)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MaxTakeoffWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MaxTakeoffWeight)
+    @Html.ValidationMessageFor(model => model.MaxTakeoffWeight)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MaxRampWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MaxRampWeight)
+    @Html.ValidationMessageFor(model => model.MaxRampWeight)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MaxZeroFuelWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MaxZeroFuelWeight)
+    @Html.ValidationMessageFor(model => model.MaxZeroFuelWeight)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MaxFuelCapacity)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MaxFuelCapacity)
+    @Html.ValidationMessageFor(model => model.MaxFuelCapacity)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.EmptyWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.EmptyWeight)
+    @Html.ValidationMessageFor(model => model.EmptyWeight)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.EmptyWeightCg)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.EmptyWeightCg)
+    @Html.ValidationMessageFor(model => model.EmptyWeightCg)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.EmptyWeightMoment)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.EmptyWeightMoment)
+    @Html.ValidationMessageFor(model => model.EmptyWeightMoment)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MaxLandingWeight)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MaxLandingWeight)
+    @Html.ValidationMessageFor(model => model.MaxLandingWeight)
+</div>
+
