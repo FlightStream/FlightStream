@@ -9,13 +9,13 @@ using FlightStream.Models;
 
 namespace FlightStream.Controllers
 { 
+    
     public class ClientsController : Controller
     {
         private FlightStreamContext db = new FlightStreamContext();
 
         //
         // GET: /Clients/
-
         public ViewResult Index()
         {
             return View(db.ClientModels.ToList());
