@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3b60c8f7-2574-409a-bd3c-a97c6fb4cc75" name="Jeff@TITAN 2013-01-21 16:09:22" runUser="Titan\Jeff" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3058da95-aa9e-4d0b-8d73-efb8803de9b4">
+    <Deployment runDeploymentRoot="Jeff_TITAN 2013-01-21 16_09_22">
+      <DeploymentItem filename="D:\UserProfiles\Users\Jeff\Documents\GitHub\FlightStream\FlightStream\FlightStream\bin\FlightStream.dll" />
+      <DeploymentItem filename="D:\UserProfiles\Users\Jeff\Documents\GitHub\FlightStream\FlightStream\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-21T16:09:22.9940471-06:00" queuing="2013-01-21T16:09:23.5140769-06:00" start="2013-01-21T16:09:23.5440786-06:00" finish="2013-01-21T16:09:58.8200963-06:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="2" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="TITAN" outcome="Error" timestamp="2013-01-21T16:09:58.8200963-06:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="About" storage="d:\userprofiles\users\jeff\documents\github\flightstream\flightstream\flightstream.tests\bin\debug\flightstream.tests.dll" id="f1e2f3c3-9a27-11e4-a2e2-bf4e09c422fa">
+      <Execution id="9159cdf8-8719-41dd-935f-3a9c41e4f2f5" />
+      <TestMethod codeBase="D:/UserProfiles/Users/Jeff/Documents/GitHub/FlightStream/FlightStream/FlightStream.Tests/bin/Debug/FlightStream.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FlightStream.Tests.Controllers.HomeControllerTest, FlightStream.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="d:\userprofiles\users\jeff\documents\github\flightstream\flightstream\flightstream.tests\bin\debug\flightstream.tests.dll" id="b75e1702-a37c-b73e-5fea-5ffbed7b6c32">
+      <Execution id="5195ba66-fea3-4405-aba5-02a7df895504" />
+      <TestMethod codeBase="D:/UserProfiles/Users/Jeff/Documents/GitHub/FlightStream/FlightStream/FlightStream.Tests/bin/Debug/FlightStream.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FlightStream.Tests.Controllers.HomeControllerTest, FlightStream.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b75e1702-a37c-b73e-5fea-5ffbed7b6c32" executionId="5195ba66-fea3-4405-aba5-02a7df895504" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1e2f3c3-9a27-11e4-a2e2-bf4e09c422fa" executionId="9159cdf8-8719-41dd-935f-3a9c41e4f2f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5195ba66-fea3-4405-aba5-02a7df895504" testId="b75e1702-a37c-b73e-5fea-5ffbed7b6c32" testName="Index" computerName="TITAN" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5195ba66-fea3-4405-aba5-02a7df895504">
+    </UnitTestResult>
+    <UnitTestResult executionId="9159cdf8-8719-41dd-935f-3a9c41e4f2f5" testId="f1e2f3c3-9a27-11e4-a2e2-bf4e09c422fa" testName="About" computerName="TITAN" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9159cdf8-8719-41dd-935f-3a9c41e4f2f5">
+    </UnitTestResult>
+  </Results>
+</TestRun>

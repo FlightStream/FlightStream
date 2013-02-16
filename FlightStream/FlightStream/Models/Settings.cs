@@ -4,6 +4,6 @@ using System.Linq;
 using System.Web;
 
 namespace FlightStream.Models {
-    public class SettingsModel {
+    public class Settings {
     }
 }

@@ -18,7 +18,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Index()
         {
-            return View(db.ClientModels.ToList());
+            return View(db.Clients.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Details(int id)
         {
-            ClientModel clientmodel = db.ClientModels.Find(id);
+            Client clientmodel = db.Clients.Find(id);
             return View(clientmodel);
         }
 
@@ -42,11 +42,11 @@ namespace FlightStream.Controllers
         // POST: /Clients/Create
 
         [HttpPost]
-        public ActionResult Create(ClientModel clientmodel)
+        public ActionResult Create(Client clientmodel)
         {
             if (ModelState.IsValid)
             {
-                db.ClientModels.Add(clientmodel);
+                db.Clients.Add(clientmodel);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
             }
@@ -59,7 +59,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Edit(int id)
         {
-            ClientModel clientmodel = db.ClientModels.Find(id);
+            Client clientmodel = db.Clients.Find(id);
             return View(clientmodel);
         }
 
@@ -67,7 +67,7 @@ namespace FlightStream.Controllers
         // POST: /Clients/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(ClientModel clientmodel)
+        public ActionResult Edit(Client clientmodel)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Delete(int id)
         {
-            ClientModel clientmodel = db.ClientModels.Find(id);
+            Client clientmodel = db.Clients.Find(id);
             return View(clientmodel);
         }
 
@@ -93,8 +93,8 @@ namespace FlightStream.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            ClientModel clientmodel = db.ClientModels.Find(id);
-            db.ClientModels.Remove(clientmodel);
+            Client clientmodel = db.Clients.Find(id);
+            db.Clients.Remove(clientmodel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
-
-namespace FlightStream.Models
+﻿namespace FlightStream.ViewModels
 {
-    public class AircraftModel
+    public class AircraftTemplateViewModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-
-        public string TailNumber { get; set; }
+//        public string TailNumber { get; set; }
         public string Airframe { get; set; }
         public int EngineCount { get; set; }
         public int FuelTankCount { get; set; }
@@ -25,7 +20,5 @@ namespace FlightStream.Models
         public int EmptyWeightMoment { get; set; }
         public int MaxLandingWeight { get; set; }
 
-        public IEnumerable<SelectListItem> AircraftTemplates;
-        public int AircraftTemplateId { get; set; }
     }
 }

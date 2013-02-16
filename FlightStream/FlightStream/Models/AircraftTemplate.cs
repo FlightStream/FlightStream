@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 
 namespace FlightStream.Models {
-    public class AircraftTemplate {
+    public class AircraftTemplate
+    {
         public int Id { get; set; }
 //        public string TailNumber { get; set; }
         public string Airframe { get; set; }

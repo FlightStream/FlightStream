@@ -18,7 +18,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Index()
         {
-            return View(db.PersonModels.ToList());
+            return View(db.Persons.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Details(int id)
         {
-            PersonModel personmodel = db.PersonModels.Find(id);
+            Person personmodel = db.Persons.Find(id);
             return View(personmodel);
         }
 
@@ -42,11 +42,11 @@ namespace FlightStream.Controllers
         // POST: /Personnel/Create
 
         [HttpPost]
-        public ActionResult Create(PersonModel personmodel)
+        public ActionResult Create(Person personmodel)
         {
             if (ModelState.IsValid)
             {
-                db.PersonModels.Add(personmodel);
+                db.Persons.Add(personmodel);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
             }
@@ -59,7 +59,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Edit(int id)
         {
-            PersonModel personmodel = db.PersonModels.Find(id);
+            Person personmodel = db.Persons.Find(id);
             return View(personmodel);
         }
 
@@ -67,7 +67,7 @@ namespace FlightStream.Controllers
         // POST: /Personnel/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(PersonModel personmodel)
+        public ActionResult Edit(Person personmodel)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Delete(int id)
         {
-            PersonModel personmodel = db.PersonModels.Find(id);
+            Person personmodel = db.Persons.Find(id);
             return View(personmodel);
         }
 
@@ -93,8 +93,8 @@ namespace FlightStream.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            PersonModel personmodel = db.PersonModels.Find(id);
-            db.PersonModels.Remove(personmodel);
+            Person personmodel = db.Persons.Find(id);
+            db.Persons.Remove(personmodel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

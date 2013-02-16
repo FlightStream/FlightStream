@@ -14,7 +14,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Index()
         {
-            return View(_context.AircraftModels.ToList());
+            return View(_context.Aircrafts.ToList());
         }
 
         //
@@ -22,7 +22,7 @@ namespace FlightStream.Controllers
 
         public ViewResult Details(int id)
         {
-            AircraftModel aircraftmodel = _context.AircraftModels.Single(x => x.Id == id);
+            Aircraft aircraftmodel = _context.Aircrafts.Single(x => x.Id == id);
             return View(aircraftmodel);
         }
 
@@ -32,13 +32,13 @@ namespace FlightStream.Controllers
         public ActionResult Create()
         {
             var templates = _context.AircraftTemplates.Select(x => new SelectListItem {Text = x.Airframe, Value = x.Id.ToString()});
-            var aircraftModel = new AircraftModel {AircraftTemplates = templates};
+            var aircraftModel = new Aircraft {AircraftTemplates = templates};
             return View(aircraftModel);
         }
 
         // /Aircraft/CreateFrom/5
 //        [HttpPost]
-//        public ActionResult CreateFrom(AircraftModel model)
+//        public ActionResult CreateFrom(Aircraft model)
 //        {
 //
 //            var aircraftTemplate = _context.AircraftTemplates.Single(x => x.Id == aircraftTemplateId);
@@ -48,9 +48,9 @@ namespace FlightStream.Controllers
 //
 //        }
 
-        AircraftModel AdaptAircraft(AircraftTemplate t)
+        Aircraft AdaptAircraft(AircraftTemplate t)
         {
-            var result = new AircraftModel
+            var result = new Aircraft
                 {
                     Airframe = t.Airframe,
                     BasicOpWeight = t.BasicOpWeight,
@@ -75,11 +75,11 @@ namespace FlightStream.Controllers
         // POST: /Aircraft/Create
 
         [HttpPost]
-        public ActionResult Create(AircraftModel aircraftmodel)
+        public ActionResult Create(Aircraft aircraftmodel)
         {
             if (ModelState.IsValid)
             {
-                _context.AircraftModels.Add(aircraftmodel);
+                _context.Aircrafts.Add(aircraftmodel);
                 _context.SaveChanges();
                 return RedirectToAction("Index");  
             }
@@ -92,7 +92,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Edit(int id)
         {
-            AircraftModel aircraftmodel = _context.AircraftModels.Single(x => x.Id == id);
+            Aircraft aircraftmodel = _context.Aircrafts.Single(x => x.Id == id);
             return View(aircraftmodel);
         }
 
@@ -100,7 +100,7 @@ namespace FlightStream.Controllers
         // POST: /Aircraft/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(AircraftModel aircraftmodel)
+        public ActionResult Edit(Aircraft aircraftmodel)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace FlightStream.Controllers
  
         public ActionResult Delete(int id)
         {
-            AircraftModel aircraftmodel = _context.AircraftModels.Single(x => x.Id == id);
+            Aircraft aircraftmodel = _context.Aircrafts.Single(x => x.Id == id);
             return View(aircraftmodel);
         }
 
@@ -126,8 +126,8 @@ namespace FlightStream.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            AircraftModel aircraftmodel = _context.AircraftModels.Single(x => x.Id == id);
-            _context.AircraftModels.Remove(aircraftmodel);
+            Aircraft aircraftmodel = _context.Aircrafts.Single(x => x.Id == id);
+            _context.Aircrafts.Remove(aircraftmodel);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

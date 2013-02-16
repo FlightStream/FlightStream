@@ -1,4 +1,4 @@
-﻿@model FlightStream.Models.ClientModel
+﻿@model FlightStream.Models.Client
 
 @{
     ViewBag.Title = "Create";
@@ -12,7 +12,7 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>ClientModel</legend>
+        <legend>Client</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.FirstName)

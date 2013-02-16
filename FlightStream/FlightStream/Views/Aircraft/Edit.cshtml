@@ -1,4 +1,4 @@
-@model FlightStream.Models.AircraftModel
+@model FlightStream.Models.Aircraft
 
 @{
     ViewBag.Title = "Edit";
@@ -9,7 +9,7 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>AircraftModel</legend>
+        <legend>Aircraft</legend>
 
         @Html.HiddenFor(model => model.Id)
 		@Html.Partial("_CreateOrEdit", Model)
